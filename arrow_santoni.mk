@@ -26,6 +26,8 @@ PRODUCT_NAME := arrow_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
+DEVICE_MAINTAINER := Jabiyeff
+
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
 
