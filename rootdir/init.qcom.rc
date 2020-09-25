@@ -786,7 +786,6 @@ service seemp_healthd /vendor/bin/seemp_healthd
     group system
 
 on charger
-    load_system_props
     start qcom-post-boot
 
 #add poweroffhandler
