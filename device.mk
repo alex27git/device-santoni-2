@@ -154,6 +154,10 @@ PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library
 
+# Binder
+PRODUCT_PACKAGES += \
+    libhwbinder
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8937 \
