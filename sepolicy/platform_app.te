@@ -1,3 +1,5 @@
+dontaudit qti_init_shell self:capability { dac_override };
+
 allow platform_app sysfs:file { getattr };
 allow platform_app sysfs_fps:file { getattr open read };
 
