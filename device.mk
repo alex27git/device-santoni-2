@@ -156,7 +156,8 @@ PRODUCT_PACKAGES += \
 
 # Binder
 PRODUCT_PACKAGES += \
-    libhwbinder
+    libhwbinder \
+    libhwbinder.vendor
 
 # Camera
 PRODUCT_PACKAGES += \
