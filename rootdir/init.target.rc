@@ -68,7 +68,7 @@ on post-fs-data
 mkdir /data/vendor/qcam/ 0770 camera camera
 
 #start camera server as daemon
-service qcamerasvr /vendor/bin/mm-qcamera-daemon
+service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
@@ -93,7 +93,7 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service qfp-daemon /system/bin/qfp-daemon
+service qfp-daemon /system/vendor/bin/qfp-daemon
    class late_start
    user system
    group system drmrpc
@@ -137,14 +137,14 @@ on property:vendor.sys.listeners.registered=*
     setprop sys.keymaster.loaded ${vendor.sys.listeners.registered}
     setprop vendor.sys.keymaster.loaded ${vendor.sys.listeners.registered}
 
-service perfd /vendor/bin/perfd
+service perfd /system/vendor/bin/perfd
    class late_start
    user root
    group root
    socket perfd seqpacket 0666 root system
    writepid /dev/cpuset/system-background/tasks
 
-service thermal-engine /vendor/bin/thermal-engine
+service thermal-engine /system/vendor/bin/thermal-engine
    class main
    user root
    socket thermal-send-client stream 0666 system system
@@ -154,18 +154,18 @@ service thermal-engine /vendor/bin/thermal-engine
    group root
    writepid /dev/cpuset/system-background/tasks
 
-service adsprpcd /vendor/bin/adsprpcd
+service adsprpcd /system/vendor/bin/adsprpcd
    class main
    user media
    group media
 
-service wcnss-service /vendor/bin/wcnss_service
-    class late_start
+service wcnss-service /system/vendor/bin/wcnss_service
+    class main
     user system
     group system wifi radio
     oneshot
 
-service hbtp /vendor/bin/hbtp_daemon
+service hbtp /system/vendor/bin/hbtp_daemon
     class main
     user system
     group system
@@ -223,7 +223,7 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl_bam_dmux"
     setprop vendor.usb.qdss.inst.name "qdss"
 
-service ppd /vendor/bin/mm-pp-dpps
+service ppd /system/vendor/bin/mm-pp-dpps
     class late_start
     user system
     group system graphics
