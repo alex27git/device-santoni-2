@@ -466,6 +466,10 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     libhidltransport
 
+# VNDK-SP:
+PRODUCT_PACKAGES += \
+    vndk-sp
+
 # Wifi
 PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
