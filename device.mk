@@ -162,7 +162,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8937 \
-    Snap
+    Camera2
 
 PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
@@ -414,6 +414,10 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
+
+# Signapk
+PRODUCT_HOST_PACKAGES += \
+    signapk
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
